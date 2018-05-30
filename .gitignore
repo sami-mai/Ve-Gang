@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+virtual/
+*.pyc
+.env
+db.sqlite3
