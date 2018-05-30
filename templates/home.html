@@ -1,0 +1,93 @@
+{%extends 'base.html'%}{% load bootstrap3 %}{% load staticfiles%}
+<!--  -->
+{% block content %}
+<br>
+<div class="container-fluid text-center">
+  <div class="jumbotron" style="background-color:#B5A2EE;">
+    {% if user.is_authenticated%}
+    <!--  -->
+
+    <!-- <h1>Suburbia Media!</h1>
+    <br> -->
+    <h1>Welcome {{user.username|title}} to Ve-Gang!</h1>
+    <h2 class="text-muted">The best medium for all things Vegan!</h2>
+    <a href="#" class="btn btn-primary">Start here</a>
+    <!--  -->
+
+    <!--  -->
+    {% else %}
+    <h1>Welcome to Ve-Gang!</h1>
+    <h2 class="text-muted">The best medium for all things Vegan!</h2>
+    <h2 class="text-muted">Login or Sign-up for free to get started!</h2> {% endif %}
+  </div>
+</div>
+{% if user.is_authenticated%}
+<div class="container-fluid" style="background-color:#B5A2EE;">
+  <div class="row">
+    <!-- <div class="col-md-8"> -->
+    <img class="img-responsive" style="width:750px; height:450px; float: right;" src="#" alt="get a lift">
+    <!-- </div> -->
+    <div class="text-center">
+      <br>
+      <br>
+      <br>
+      <h2>Facilities Managent.</h2>
+      <h3 class="text-muted">Find that handyman.</h3>
+      <!-- <br>
+      <p class="text-muted"> Carpool-R-Us is dedicated to keeping riders</p>
+      <p class="text-muted"> and drivers safe on the road.</p>
+      <br> -->
+      <!-- <a href="#" class="btn btn-info" type="button" name="button">Sign up for a ride</a> -->
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container-fluid" style="background-color:#B5A2EE;">
+  <div class="row">
+    <!-- <div class="well"> -->
+    <img class="img-responsive" style="width:750px; height:400px; float: left;" src="#" alt="loop">
+    <div class="text-center">
+      <br>
+      <br>
+      <br>
+      <h2>Be in the loop about <br> everything happening <br>in your neighbourhood.</h2>
+      <br>
+      <!-- <h2>Let's jam.</h2>
+      <br> -->
+      <!-- <a href="#" class="btn btn-info" type="button" name="button">Button</a> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container-fluid" style="background-color:#B5A2EE;">
+  <div class="row">
+    <!-- <div class="col-md-8"> -->
+    <img class="img-responsive" style="width:750px; height:450px; float: right;" src="#" alt="get a lift">
+    <!-- </div> -->
+    <div class="text-center">
+      <br>
+      <br>
+      <br>
+      <h2>It matters how you get the news.</h2>
+      <h3 class="text-muted">Get interest based news.</h3>
+      <!-- <br>
+      <p class="text-muted"> Carpool-R-Us is dedicated to keeping riders</p>
+      <p class="text-muted"> and drivers safe on the road.</p>
+      <br> -->
+      <!-- <a href="#" class="btn btn-info" type="button" name="button">Sign up for a ride</a> -->
+    </div>
+  </div>
+
+</div>
+<!--  -->
+{% else %}
+
+<!--  -->
+{%endif%}
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<!--  -->
+{%endblock%}
