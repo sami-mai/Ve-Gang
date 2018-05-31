@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_countries',
     'social_django',
     'bootstrap3',
-    'thirdauth',
+    'accounts_app',
+    'recipe_app',
+    'listing_app',
 ]
 
 MIDDLEWARE = [
@@ -173,3 +176,5 @@ LOGIN_REDIRECT_URL = 'home'
 SOCIAL_AUTH_GITHUB_KEY = config('SOCIAL_AUTH_GITHUB_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = config('SOCIAL_AUTH_GITHUB_SECRET')
 SOCIAL_AUTH_FACEBOOK_KEY = config('SOCIAL_AUTH_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = config('SOCIAL_AUTH_FACEBOOK_SECRET')
+FACEBOOK_API_VERSION = config('FACEBOOK_API_VERSION')

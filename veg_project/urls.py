@@ -23,9 +23,11 @@ from . import views as project_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', project_views.home, name='home'),
-    url(r'^auth/', include('thirdauth.urls')),
-    url(r'^accounts/login/$', auth_views.login, name='login'),
+    url(r'^auth/', include('accounts_app.urls')),
+    # url(r'^avegang/recipe', include('recipe_app.urls')),
+    # url(r'^avegang/listing', include('listing_app.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, {"next_page": '/'}),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
 ]
