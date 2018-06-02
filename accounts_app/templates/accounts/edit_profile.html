@@ -1,0 +1,16 @@
+{% extends 'thirdauth/base.html' %}
+<!--  -->
+{% block content %}
+<h2>Homepage</h2>
+<p>Hello {{ user.username }}!</p>
+<div>
+  <h1>Third-party authentication demo</h1>
+
+  <p>
+    {% if user and not user.is_anonymous %} Hello {{ user.get_full_name|default:user.username }}! {% else %} I don’t think we’ve met before. {% endif %}
+  </p>
+</div>
+<!--  -->
+<div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+</div>
+{% endblock %}
